@@ -86,7 +86,7 @@ export default function Hero() {
                     </motion.a>
 
                     <motion.a
-                        href="/Kadiri_Venkata_Balaji_Resume.pdf"
+                        href="https://drive.google.com/file/d/1n5EKgQL3pMkEMTmUZY__-8zw-h_7ompI/preview"
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
