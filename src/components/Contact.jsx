@@ -3,10 +3,10 @@ import { useRef, useState } from 'react';
 import { FiMail, FiMapPin, FiSend, FiGithub, FiLinkedin, FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
 import emailjs from '@emailjs/browser';
 
-// ⚠️ Replace these with your EmailJS credentials from https://emailjs.com
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+// ⚠️ Keep these secure if possible, though EmailJS public keys are intended for frontend use
+const EMAILJS_SERVICE_ID = 'service_4vf9txf';
+const EMAILJS_TEMPLATE_ID = 'template_r89csqk';
+const EMAILJS_PUBLIC_KEY = 'FNiIuaQ6XwbX8f5zI';
 
 const contactInfo = [
     { icon: <FiMail size={22} />, label: 'Email', value: 'kadirivenkatabalaji9392@gmail.com', href: 'mailto:kadirivenkatabalaji9392@gmail.com' },
