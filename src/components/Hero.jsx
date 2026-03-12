@@ -40,6 +40,17 @@ export default function Hero() {
                 }}
             />
 
+            {/* Central Radial Glow */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div
+                    className="w-[600px] h-[600px] rounded-full blur-[120px]"
+                    style={{
+                        background: "radial-gradient(circle, rgba(99,102,241,0.4) 0%, rgba(168,85,247,0.3) 40%, transparent 70%)",
+                        opacity: isDark ? 0.3 : 0.1,
+                    }}
+                />
+            </div>
+
             {/* Content */}
             <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
                 {/* Profile Avatar */}
@@ -105,6 +116,24 @@ export default function Hero() {
                     <span style={{ color: 'var(--text-divider)' }}>|</span>{' '}AI & Software Developer
                 </motion.p>
 
+                {/* Tech Stack Strip */}
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.65, duration: 0.8 }}
+                    className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-6"
+                >
+                    {["Python", "Spark", "SQL", "React", "AWS"].map((tech) => (
+                        <span
+                            key={tech}
+                            className="px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium glass-card"
+                            style={{ color: 'var(--text-secondary)' }}
+                        >
+                            {tech}
+                        </span>
+                    ))}
+                </motion.div>
+
                 <motion.p
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -165,6 +194,19 @@ export default function Hero() {
                         <FiMail size={18} />
                         Contact Me
                     </motion.a>
+                </motion.div>
+
+                {/* Social Proof Strip */}
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.85, duration: 0.8 }}
+                    className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-medium opacity-80"
+                    style={{ color: 'var(--text-faint)' }}
+                >
+                    <span className="flex items-center gap-2">⭐ 1100+ LinkedIn Connections</span>
+                    <span className="flex items-center gap-2">💻 Active GitHub Projects</span>
+                    <span className="flex items-center gap-2">🚀 Open to Opportunities</span>
                 </motion.div>
 
                 {/* Social Icons */}
