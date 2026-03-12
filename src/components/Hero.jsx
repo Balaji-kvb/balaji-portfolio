@@ -12,9 +12,61 @@ export default function Hero() {
         <section
             id="home"
             className="relative min-h-screen flex items-center justify-center overflow-hidden"
+            aria-label="Hero section"
         >
+            {/* Ambient glow blobs */}
+            <div
+                className="absolute glow-blob"
+                style={{
+                    width: '500px', height: '500px',
+                    left: '5%', top: '15%',
+                    background: `radial-gradient(circle, rgba(6,182,212,${isDark ? 0.35 : 0.2}), transparent 70%)`,
+                }}
+            />
+            <div
+                className="absolute glow-blob"
+                style={{
+                    width: '400px', height: '400px',
+                    right: '0%', top: '50%',
+                    background: `radial-gradient(circle, rgba(99,102,241,${isDark ? 0.3 : 0.15}), transparent 70%)`,
+                }}
+            />
+
+            <div className="absolute inset-0 bg-grid" />
+            <div
+                className="absolute inset-0"
+                style={{
+                    background: `linear-gradient(to bottom, var(--bg-primary), transparent, var(--bg-primary))`,
+                }}
+            />
+
             {/* Content */}
             <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+                {/* Profile Avatar */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="mb-6 flex justify-center"
+                >
+                    <div className="relative">
+                        <div
+                            className="w-28 h-28 md:w-32 md:h-32 rounded-full flex items-center justify-center text-4xl md:text-5xl font-bold gradient-text"
+                            style={{
+                                background: 'var(--bg-card)',
+                                backdropFilter: 'blur(40px)',
+                                border: '2px solid var(--border-card)',
+                                boxShadow: `0 0 40px rgba(6,182,212,${isDark ? 0.15 : 0.1})`,
+                            }}
+                        >
+                            KB
+                        </div>
+                        {/* Online dot */}
+                        <div className="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-emerald-400 border-2"
+                            style={{ borderColor: 'var(--bg-primary)' }} />
+                    </div>
+                </motion.div>
+
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -80,6 +132,7 @@ export default function Hero() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="btn-primary flex items-center gap-2"
+                        aria-label="View projects"
                     >
                         <FiArrowDown className="animate-bounce" />
                         View Projects
@@ -92,6 +145,7 @@ export default function Hero() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="btn-secondary flex items-center gap-2"
+                        aria-label="Download resume"
                     >
                         <HiOutlineDocumentDownload size={18} />
                         Download Resume
@@ -106,6 +160,7 @@ export default function Hero() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="btn-secondary flex items-center gap-2"
+                        aria-label="Contact me"
                     >
                         <FiMail size={18} />
                         Contact Me
@@ -118,17 +173,18 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.9 }}
                     className="flex items-center justify-center gap-6 mt-10"
+                    aria-label="Social links"
                 >
-                    <a href="https://github.com/Balaji-kvb" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-cyan-400 transition-colors" style={{ color: 'var(--text-muted)' }}>
+                    <a href="https://github.com/Balaji-kvb" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-cyan-400 transition-colors" style={{ color: 'var(--text-muted)' }} aria-label="GitHub">
                         <FiGithub />
                     </a>
-                    <a href="https://www.linkedin.com/in/venkatabalajik7/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-cyan-400 transition-colors" style={{ color: 'var(--text-muted)' }}>
+                    <a href="https://www.linkedin.com/in/venkatabalajik7/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-cyan-400 transition-colors" style={{ color: 'var(--text-muted)' }} aria-label="LinkedIn">
                         <FiLinkedin />
                     </a>
-                    <a href="https://leetcode.com/u/Venkata_Balaji/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-cyan-400 transition-colors" style={{ color: 'var(--text-muted)' }}>
+                    <a href="https://leetcode.com/u/Venkata_Balaji/" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-cyan-400 transition-colors" style={{ color: 'var(--text-muted)' }} aria-label="LeetCode">
                         <SiLeetcode />
                     </a>
-                    <a href="mailto:kadirivenkatabalaji9392@gmail.com" className="text-2xl hover:text-cyan-400 transition-colors" style={{ color: 'var(--text-muted)' }}>
+                    <a href="mailto:kadirivenkatabalaji9392@gmail.com" className="text-2xl hover:text-cyan-400 transition-colors" style={{ color: 'var(--text-muted)' }} aria-label="Email">
                         <FiMail />
                     </a>
                 </motion.div>
@@ -139,6 +195,7 @@ export default function Hero() {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5 }}
                     className="absolute bottom-10 left-1/2 -translate-x-1/2"
+                    aria-hidden="true"
                 >
                     <motion.div
                         animate={{ y: [0, 10, 0] }}

@@ -22,7 +22,7 @@ export default function GithubStats() {
     const isInView = useInView(ref, { once: true, margin: '-100px' });
 
     return (
-        <section id="github" className="relative">
+        <section id="github" className="relative" aria-label="GitHub statistics">
             <div className="absolute inset-0 bg-dots opacity-20" />
             <div className="section-container relative" ref={ref}>
                 <motion.div
@@ -73,6 +73,7 @@ export default function GithubStats() {
                                 src="https://ghchart.rshah.org/06b6d4/Balaji-kvb"
                                 alt="GitHub Contribution Graph"
                                 className="w-full opacity-70 hover:opacity-100 transition-opacity duration-500"
+                                loading="lazy"
                                 onError={(e) => {
                                     e.target.style.display = 'none';
                                     e.target.parentElement.innerHTML =

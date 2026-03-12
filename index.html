@@ -5,16 +5,64 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Kadiri Venkata Balaji | Big Data Analytics & Software Developer Portfolio</title>
   <meta name="description"
-    content="Portfolio of Kadiri Venkata Balaji, Big Data Analytics student, developer and data enthusiast." />
-  <meta name="keywords" content="Kadiri Venkata Balaji, portfolio, developer, big data, analytics, software" />
+    content="Portfolio of Kadiri Venkata Balaji — Big Data Analytics Student, Data Engineer, and Software Developer. Explore projects in data analytics, machine learning, and modern web development." />
+  <meta name="keywords"
+    content="Kadiri Venkata Balaji, portfolio, developer, big data, analytics, software developer, data engineer, machine learning, React, Python" />
+  <meta name="author" content="Kadiri Venkata Balaji" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://balaji-portfolio.vercel.app/" />
+  <meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://balaji-portfolio.vercel.app/" />
+  <meta property="og:title" content="Kadiri Venkata Balaji | Developer Portfolio" />
+  <meta property="og:description"
+    content="Big Data Analytics Student, Data Engineer & Software Developer. Explore my projects, skills, and certifications." />
+  <meta property="og:image" content="https://balaji-portfolio.vercel.app/og-image.png" />
+  <meta property="og:site_name" content="KVB Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://balaji-portfolio.vercel.app/" />
+  <meta name="twitter:title" content="Kadiri Venkata Balaji | Developer Portfolio" />
+  <meta name="twitter:description"
+    content="Big Data Analytics Student, Data Engineer & Software Developer. Explore my projects, skills, and certifications." />
+  <meta name="twitter:image" content="https://balaji-portfolio.vercel.app/og-image.png" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kadiri Venkata Balaji",
+      "url": "https://balaji-portfolio.vercel.app",
+      "jobTitle": "Big Data Analytics Student & Software Developer",
+      "sameAs": [
+        "https://github.com/Balaji-kvb",
+        "https://www.linkedin.com/in/venkatabalajik7/",
+        "https://leetcode.com/u/Venkata_Balaji/"
+      ],
+      "knowsAbout": ["Big Data Analytics", "Python", "React", "Machine Learning", "SQL", "Data Engineering"]
+    }
+    </script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <title>Kadiri Venkata Balaji | Developer Portfolio</title>
+
+  <!-- Analytics: Plausible (privacy-friendly, no cookies) -->
+  <script defer data-domain="balaji-portfolio.vercel.app" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Theme flash prevention -->
   <script>
-    // Prevent flash of wrong theme
     (function () {
       const saved = localStorage.getItem('portfolio-theme');
       const isDark = saved ? saved === 'dark' : true;
