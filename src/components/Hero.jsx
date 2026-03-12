@@ -58,7 +58,7 @@ export default function Hero() {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="mb-6 flex justify-center"
+                    className="mb-6 flex justify-center items-center"
                 >
                     <div className="relative">
                         <div
@@ -236,8 +236,11 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5 }}
-                    className="absolute bottom-10 left-1/2 -translate-x-1/2"
-                    aria-hidden="true"
+                    className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer"
+                    aria-label="Scroll to about section"
+                    onClick={() => {
+                        document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                 >
                     <motion.div
                         animate={{ y: [0, 10, 0] }}
