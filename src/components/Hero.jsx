@@ -156,10 +156,10 @@ export default function Hero() {
                         }}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="btn-primary flex items-center gap-2"
+                        className="btn-secondary flex items-center gap-2"
                         aria-label="View projects"
                     >
-                        <FiArrowDown className="animate-bounce" />
+                        <FiArrowDown />
                         View Projects
                     </motion.a>
 
