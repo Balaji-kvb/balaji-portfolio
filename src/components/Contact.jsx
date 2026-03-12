@@ -5,7 +5,8 @@ import emailjs from '@emailjs/browser';
 
 // ⚠️ Keep these secure if possible, though EmailJS public keys are intended for frontend use
 const EMAILJS_SERVICE_ID = 'service_4vf9txf';
-const EMAILJS_TEMPLATE_ID = 'template_r89csqk';
+const EMAILJS_MAIN_TEMPLATE_ID = 'template_r89csqk';
+const EMAILJS_REPLY_TEMPLATE_ID = 'template_radfmbr';
 const EMAILJS_PUBLIC_KEY = 'FNiIuaQ6XwbX8f5zI';
 
 const contactInfo = [
@@ -27,12 +28,22 @@ export default function Contact() {
         setStatus('sending');
 
         try {
+            // 1. Send the main email to the portfolio owner
             await emailjs.sendForm(
                 EMAILJS_SERVICE_ID,
-                EMAILJS_TEMPLATE_ID,
+                EMAILJS_MAIN_TEMPLATE_ID,
                 formRef.current,
                 EMAILJS_PUBLIC_KEY
             );
+
+            // 2. Send the auto-reply email to the sender
+            await emailjs.sendForm(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_REPLY_TEMPLATE_ID,
+                formRef.current,
+                EMAILJS_PUBLIC_KEY
+            );
+
             setStatus('success');
             setFormData({ name: '', email: '', message: '' });
             setTimeout(() => setStatus('idle'), 4000);
