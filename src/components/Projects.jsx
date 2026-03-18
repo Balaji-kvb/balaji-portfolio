@@ -7,6 +7,7 @@ const filters = [
     { id: 'all', label: 'All' },
     { id: 'fullstack', label: 'Full Stack' },
     { id: 'backend', label: 'Backend' },
+    { id: 'ml', label: 'ML / AI' },
 ];
 
 const projects = [
@@ -16,6 +17,33 @@ const projects = [
         tech: ['Go', 'Redis', 'PostgreSQL', 'Next.js', 'Tailwind CSS'],
         github: 'https://github.com/Balaji-kvb',
         demo: '#',
+        featured: true,
+        category: 'backend',
+    },
+    {
+        title: 'Employee Salary Prediction',
+        description: 'Developed a Machine Learning-based web application using Streamlit to predict employee salaries based on experience, education, and role. Trained a Linear Regression model and deployed the full pipeline including model training, UI development, and cloud deployment.',
+        tech: ['Python', 'Streamlit', 'Scikit-learn', 'Pandas', 'NumPy'],
+        github: 'https://github.com/Balaji-kvb/Employee-Salary-Prediction',
+        demo: 'https://employee-salary-prediction-venkatabalaji.streamlit.app',
+        featured: true,
+        category: 'ml',
+    },
+    {
+        title: 'Sports Slot Booking Platform',
+        description: 'Developed a real-world production booking platform to digitize sports slot reservations. Implemented conflict detection logic to prevent overlapping bookings and built an admin dashboard for management.',
+        tech: ['Next.js', 'Node.js', 'Express.js', 'MongoDB'],
+        github: 'https://github.com/Balaji-kvb',
+        demo: 'https://vibhasports.com/',
+        featured: true,
+        category: 'fullstack',
+    },
+    {
+        title: 'Videmy EdTech Platform',
+        description: 'Built a scalable corporate web platform with B2B inquiry system and WhatsApp integration. Improved UI performance and responsiveness across devices.',
+        tech: ['React', 'Next.js', 'MongoDB', 'Tailwind CSS'],
+        github: 'https://github.com/Balaji-kvb',
+        demo: 'https://www.videmy.org/',
         featured: true,
         category: 'fullstack',
     },

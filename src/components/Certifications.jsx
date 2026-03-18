@@ -35,6 +35,22 @@ const certifications = [
         credential: '#',
         color: 'from-yellow-500 to-orange-400',
     },
+    {
+        title: 'Big Data 101',
+        issuer: 'Cognitive Class',
+        date: '2024',
+        description: 'Fundamentals of big data concepts, Hadoop ecosystem, and large-scale data processing techniques for modern data-driven applications.',
+        credential: '#',
+        color: 'from-green-500 to-blue-400',
+    },
+    {
+        title: 'Responsive Web Design',
+        issuer: 'freeCodeCamp',
+        date: '2024',
+        description: 'Comprehensive certification covering HTML5, CSS3, Flexbox, Grid, responsive design principles, and accessibility best practices.',
+        credential: '#',
+        color: 'from-pink-500 to-purple-400',
+    },
 ];
 
 export default function Certifications() {

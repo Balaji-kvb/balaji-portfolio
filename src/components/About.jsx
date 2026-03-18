@@ -6,17 +6,17 @@ const highlights = [
     {
         icon: <FiCode size={24} />,
         title: 'Full Stack Development',
-        description: 'Building production-ready web applications with React, Next.js, Node.js, and modern backend technologies.',
-    },
-    {
-        icon: <FiDatabase size={24} />,
-        title: 'Distributed Systems',
-        description: 'Designing high-concurrency systems with Redis-based locking, atomic transactions, and scalable REST APIs.',
+        description: 'Building production-ready web applications with React, Next.js, Node.js, and scalable backend systems.',
     },
     {
         icon: <FiTrendingUp size={24} />,
-        title: 'Performance & Scalability',
-        description: 'Optimizing database queries, building microservices, and ensuring system reliability under heavy load.',
+        title: 'Data & Machine Learning',
+        description: 'Developing ML-based applications, data visualizations, and AI-driven solutions using Python and Scikit-learn.',
+    },
+    {
+        icon: <FiDatabase size={24} />,
+        title: 'Backend & Distributed Systems',
+        description: 'Designing high-concurrency systems with Redis-based locking, atomic transactions, and optimized databases.',
     },
 ];
 
@@ -49,26 +49,23 @@ export default function About() {
                             <p style={{ color: 'var(--text-secondary)' }} className="leading-relaxed text-lg">
                                 I&apos;m <span style={{ color: 'var(--text-accent)' }} className="font-semibold">Kadiri Venkata Balaji</span>,
                                 a Big Data Analytics student and Full Stack Developer with experience in building
-                                scalable web applications and high-performance backend systems. I specialize in
-                                React, Next.js, Node.js, and distributed systems.
+                                scalable web applications and machine learning solutions. I specialize in
+                                React, Next.js, Node.js, and data-driven systems.
                             </p>
                             <p style={{ color: 'var(--text-muted)' }} className="leading-relaxed">
-                                I have worked on real-world projects including booking systems and high-concurrency
-                                platforms, focusing on performance, scalability, and clean architecture. From
-                                designing Redis-based distributed locking to optimizing database queries for fast
-                                performance, I bring practical engineering skills to every challenge.
+                                I have worked on real-world platforms, AI-based applications, and high-performance
+                                backend systems, focusing on scalability, performance, and clean architecture.
                             </p>
                             <p style={{ color: 'var(--text-muted)' }} className="leading-relaxed">
-                                I&apos;m passionate about building software that solves real problems — whether
-                                it&apos;s preventing inventory overselling in flash sales or digitizing manual
-                                scheduling operations for businesses.
+                                From ML-powered salary prediction apps to production booking platforms,
+                                I build software that solves real problems.
                             </p>
 
                             <div className="grid grid-cols-3 gap-4 pt-5 mt-2" style={{ borderTop: '1px solid var(--border-card)' }}>
                                 {[
-                                    { number: '3+', label: 'Projects' },
-                                    { number: '4+', label: 'Certifications' },
-                                    { number: '2+', label: 'Experiences' },
+                                    { number: '4+', label: 'Projects' },
+                                    { number: '6+', label: 'Certifications' },
+                                    { number: '4+', label: 'Experiences' },
                                 ].map((stat) => (
                                     <div key={stat.label} className="text-center">
                                         <div className="text-2xl font-bold gradient-text">{stat.number}</div>

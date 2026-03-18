@@ -5,14 +5,11 @@ import Loader from './components/Loader';
 import { useTheme } from './context/ThemeContext';
 
 // Lazy load below-the-fold sections
-const About = lazy(() => import('./components/About'));
-const Experience = lazy(() => import('./components/Experience'));
-const Skills = lazy(() => import('./components/Skills'));
 const Projects = lazy(() => import('./components/Projects'));
-const GithubStats = lazy(() => import('./components/GithubStats'));
+const Skills = lazy(() => import('./components/Skills'));
+const Experience = lazy(() => import('./components/Experience'));
 const Certifications = lazy(() => import('./components/Certifications'));
-const Blog = lazy(() => import('./components/Blog'));
-const Testimonials = lazy(() => import('./components/Testimonials'));
+const About = lazy(() => import('./components/About'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
@@ -55,14 +52,11 @@ function App() {
           <main id="main-content">
             <Hero />
             <Suspense fallback={<SectionFallback />}>
-              <About />
-              <Experience />
-              <Skills />
               <Projects />
-              <GithubStats />
-              <Blog />
+              <Skills />
+              <Experience />
               <Certifications />
-              <Testimonials />
+              <About />
               <Contact />
             </Suspense>
           </main>

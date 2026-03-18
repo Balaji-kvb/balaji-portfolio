@@ -4,6 +4,7 @@ import {
     SiCplusplus, SiPython, SiJavascript, SiC, SiGo,
     SiReact, SiNextdotjs, SiTailwindcss,
     SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPostgresql,
+    SiScikitlearn, SiPandas, SiNumpy,
     SiGit, SiDocker, SiNginx, SiLinux, SiGithubactions,
 } from 'react-icons/si';
 import { FiServer, FiCpu } from 'react-icons/fi';
@@ -49,8 +50,18 @@ const categories = [
         ],
     },
     {
+        title: 'Data & AI',
+        color: 'from-orange-400 to-yellow-400',
+        skills: [
+            { name: 'ML', icon: <FiCpu /> },
+            { name: 'Scikit-learn', icon: <SiScikitlearn /> },
+            { name: 'Pandas', icon: <SiPandas /> },
+            { name: 'NumPy', icon: <SiNumpy /> },
+        ],
+    },
+    {
         title: 'DevOps',
-        color: 'from-orange-400 to-cyan-400',
+        color: 'from-yellow-400 to-cyan-400',
         skills: [
             { name: 'Git', icon: <SiGit /> },
             { name: 'GitHub Actions', icon: <SiGithubactions /> },

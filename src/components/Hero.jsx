@@ -53,27 +53,6 @@ export default function Hero() {
 
             {/* Content */}
             <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-                {/* Profile Avatar */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="flex flex-col items-center justify-center mb-6"
-                >
-                    <div
-                        className="w-28 h-28 md:w-32 md:h-32 rounded-full flex items-center justify-center text-4xl md:text-5xl font-bold gradient-text"
-                        style={{
-                            background: 'var(--bg-card)',
-                            backdropFilter: 'blur(40px)',
-                            border: '2px solid var(--border-card)',
-                            boxShadow: `0 0 40px rgba(6,182,212,${isDark ? 0.15 : 0.1})`,
-                            marginBottom: '16px'
-                        }}
-                    >
-                        KB
-                    </div>
-                </motion.div>
-
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
