@@ -1,52 +1,72 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import {
-    SiCplusplus, SiPython, SiJavascript,
-    SiMysql, SiPandas, SiNumpy,
-    SiHtml5, SiCss, SiReact, SiNodedotjs,
-    SiGit, SiDocker, SiLinux,
+    SiCplusplus, SiPython, SiJavascript, SiC, SiGo,
+    SiReact, SiNextdotjs, SiTailwindcss,
+    SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPostgresql,
+    SiGit, SiDocker, SiNginx, SiLinux, SiGithubactions,
 } from 'react-icons/si';
-import { VscCode } from 'react-icons/vsc';
-import { TbChartHistogram } from 'react-icons/tb';
+import { FiServer, FiCpu } from 'react-icons/fi';
 
 const categories = [
     {
-        title: 'Programming',
+        title: 'Languages',
         color: 'from-cyan-400 to-blue-400',
         skills: [
+            { name: 'C', icon: <SiC /> },
             { name: 'C++', icon: <SiCplusplus /> },
             { name: 'Python', icon: <SiPython /> },
             { name: 'JavaScript', icon: <SiJavascript /> },
+            { name: 'Go', icon: <SiGo /> },
         ],
     },
     {
-        title: 'Data & Analytics',
+        title: 'Frontend',
         color: 'from-blue-400 to-purple-400',
         skills: [
-            { name: 'SQL', icon: <SiMysql /> },
-            { name: 'Pandas', icon: <SiPandas /> },
-            { name: 'NumPy', icon: <SiNumpy /> },
-            { name: 'Power BI', icon: <TbChartHistogram /> },
+            { name: 'React.js', icon: <SiReact /> },
+            { name: 'Next.js', icon: <SiNextdotjs /> },
+            { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
         ],
     },
     {
-        title: 'Web Development',
+        title: 'Backend',
         color: 'from-purple-400 to-pink-400',
         skills: [
-            { name: 'HTML', icon: <SiHtml5 /> },
-            { name: 'CSS', icon: <SiCss /> },
-            { name: 'React', icon: <SiReact /> },
             { name: 'Node.js', icon: <SiNodedotjs /> },
+            { name: 'Express.js', icon: <SiExpress /> },
+            { name: 'REST APIs', icon: <FiServer /> },
+            { name: 'Microservices', icon: <FiCpu /> },
         ],
     },
     {
-        title: 'Tools & Platforms',
-        color: 'from-pink-400 to-cyan-400',
+        title: 'Database',
+        color: 'from-pink-400 to-orange-400',
+        skills: [
+            { name: 'MongoDB', icon: <SiMongodb /> },
+            { name: 'MySQL', icon: <SiMysql /> },
+            { name: 'PostgreSQL', icon: <SiPostgresql /> },
+        ],
+    },
+    {
+        title: 'DevOps',
+        color: 'from-orange-400 to-cyan-400',
         skills: [
             { name: 'Git', icon: <SiGit /> },
+            { name: 'GitHub Actions', icon: <SiGithubactions /> },
             { name: 'Docker', icon: <SiDocker /> },
+            { name: 'Nginx', icon: <SiNginx /> },
             { name: 'Linux', icon: <SiLinux /> },
-            { name: 'VS Code', icon: <VscCode /> },
+        ],
+    },
+    {
+        title: 'Core CS',
+        color: 'from-green-400 to-blue-400',
+        skills: [
+            { name: 'DSA', icon: <FiCpu /> },
+            { name: 'DBMS', icon: <FiServer /> },
+            { name: 'OS', icon: <SiLinux /> },
+            { name: 'OOP', icon: <FiCpu /> },
         ],
     },
 ];
@@ -71,7 +91,7 @@ export default function Skills() {
                     <p className="section-subtitle">Technologies and tools I work with</p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {categories.map((cat, catIdx) => (
                         <motion.div
                             key={cat.title}

@@ -5,65 +5,19 @@ import { useTheme } from '../context/ThemeContext';
 
 const filters = [
     { id: 'all', label: 'All' },
-    { id: 'data', label: 'Data' },
-    { id: 'web', label: 'Web' },
-    { id: 'ml', label: 'ML' },
+    { id: 'fullstack', label: 'Full Stack' },
+    { id: 'backend', label: 'Backend' },
 ];
 
 const projects = [
     {
-        title: 'InsightFlow Analytics',
-        description: 'An end-to-end data analytics web application with modular architecture for data ingestion, processing, and interactive visualization dashboards.',
-        tech: ['Python', 'Pandas', 'Streamlit', 'SQL'],
-        github: 'https://github.com/kadiribalaji',
+        title: 'Flash Sale System',
+        description: 'Built a high-concurrency flash sale system capable of handling thousands of simultaneous users. Prevented inventory overselling using Redis-based distributed locking and atomic database transactions. Designed scalable REST APIs optimized for high traffic and ensured system reliability under heavy load.',
+        tech: ['Go', 'Redis', 'PostgreSQL', 'Next.js', 'Tailwind CSS'],
+        github: 'https://github.com/Balaji-kvb',
         demo: '#',
         featured: true,
-        category: 'data',
-    },
-    {
-        title: 'Real-Time Data Pipeline',
-        description: 'Scalable data pipeline for real-time stream processing, built with event-driven architecture and automated ETL workflows.',
-        tech: ['Python', 'Docker', 'SQL', 'Linux'],
-        github: 'https://github.com/kadiribalaji',
-        demo: '#',
-        featured: true,
-        category: 'data',
-    },
-    {
-        title: 'Portfolio Website',
-        description: 'Modern developer portfolio with dark theme, smooth animations, and responsive design built with React and Tailwind CSS.',
-        tech: ['React', 'Tailwind CSS', 'Framer Motion'],
-        github: 'https://github.com/kadiribalaji',
-        demo: '#',
-        featured: false,
-        category: 'web',
-    },
-    {
-        title: 'ML Prediction Dashboard',
-        description: 'Interactive machine learning dashboard for visualizing model predictions, feature importance, and performance metrics.',
-        tech: ['Python', 'Scikit-learn', 'Power BI'],
-        github: 'https://github.com/kadiribalaji',
-        demo: '#',
-        featured: true,
-        category: 'ml',
-    },
-    {
-        title: 'E-Commerce Analytics',
-        description: 'Comprehensive analytics platform for e-commerce data, featuring customer segmentation, sales forecasting, and trend analysis.',
-        tech: ['Python', 'NumPy', 'Pandas', 'SQL'],
-        github: 'https://github.com/kadiribalaji',
-        demo: '#',
-        featured: false,
-        category: 'data',
-    },
-    {
-        title: 'Task Management API',
-        description: 'RESTful API for task management with authentication, role-based access control, and real-time notifications.',
-        tech: ['Node.js', 'Express', 'MongoDB'],
-        github: 'https://github.com/kadiribalaji',
-        demo: '#',
-        featured: false,
-        category: 'web',
+        category: 'fullstack',
     },
 ];
 

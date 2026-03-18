@@ -107,9 +107,9 @@ export default function Hero() {
                     className="text-lg sm:text-xl md:text-2xl mb-4 font-light tracking-wide"
                     style={{ color: 'var(--text-muted)' }}
                 >
-                    Big Data Analytics Student{' '}
-                    <span style={{ color: 'var(--text-divider)' }}>|</span>{' '}Data Engineer{' '}
-                    <span style={{ color: 'var(--text-divider)' }}>|</span>{' '}AI & Software Developer
+                    Full Stack Developer{' '}
+                    <span style={{ color: 'var(--text-divider)' }}>|</span>{' '}Backend Engineer{' '}
+                    <span style={{ color: 'var(--text-divider)' }}>|</span>{' '}Big Data Analytics Student
                 </motion.p>
 
                 {/* Tech Stack Strip */}
@@ -119,7 +119,7 @@ export default function Hero() {
                     transition={{ delay: 0.65, duration: 0.8 }}
                     className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-6"
                 >
-                    {["Python", "Spark", "SQL", "React", "AWS"].map((tech) => (
+                    {["React", "Next.js", "Node.js", "Go", "Redis"].map((tech) => (
                         <span
                             key={tech}
                             className="px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium glass-card"
@@ -137,7 +137,7 @@ export default function Hero() {
                     className="text-base md:text-lg mb-12 max-w-2xl mx-auto font-light"
                     style={{ color: 'var(--text-faint)' }}
                 >
-                    Turning raw data into meaningful insights and building modern applications
+                    Building scalable web applications and high-performance backend systems
                     that solve real-world problems.
                 </motion.p>
 

@@ -4,19 +4,19 @@ import { FiCode, FiDatabase, FiTrendingUp } from 'react-icons/fi';
 
 const highlights = [
     {
-        icon: <FiDatabase size={24} />,
-        title: 'Data Analytics',
-        description: 'Passionate about transforming raw data into actionable insights using modern analytics tools and techniques.',
+        icon: <FiCode size={24} />,
+        title: 'Full Stack Development',
+        description: 'Building production-ready web applications with React, Next.js, Node.js, and modern backend technologies.',
     },
     {
-        icon: <FiCode size={24} />,
-        title: 'Software Development',
-        description: 'Building robust, scalable applications with modern web technologies and clean code practices.',
+        icon: <FiDatabase size={24} />,
+        title: 'Distributed Systems',
+        description: 'Designing high-concurrency systems with Redis-based locking, atomic transactions, and scalable REST APIs.',
     },
     {
         icon: <FiTrendingUp size={24} />,
-        title: 'Machine Learning',
-        description: 'Exploring ML algorithms and statistical models to uncover patterns and drive data-driven decisions.',
+        title: 'Performance & Scalability',
+        description: 'Optimizing database queries, building microservices, and ensuring system reliability under heavy load.',
     },
 ];
 
@@ -48,27 +48,27 @@ export default function About() {
                         <div className="glass-card p-8 space-y-5">
                             <p style={{ color: 'var(--text-secondary)' }} className="leading-relaxed text-lg">
                                 I&apos;m <span style={{ color: 'var(--text-accent)' }} className="font-semibold">Kadiri Venkata Balaji</span>,
-                                a Big Data Analytics student with a deep passion for uncovering insights from data
-                                and building impactful software solutions. My journey spans from crafting modern web
-                                applications to diving deep into data pipelines and machine learning models.
+                                a Big Data Analytics student and Full Stack Developer with experience in building
+                                scalable web applications and high-performance backend systems. I specialize in
+                                React, Next.js, Node.js, and distributed systems.
                             </p>
                             <p style={{ color: 'var(--text-muted)' }} className="leading-relaxed">
-                                I thrive at the intersection of data and software engineering, where I combine
-                                analytical thinking with hands-on development skills. Whether it&apos;s creating
-                                interactive dashboards, optimizing SQL queries, or deploying full-stack applications,
-                                I bring curiosity and dedication to every project.
+                                I have worked on real-world projects including booking systems and high-concurrency
+                                platforms, focusing on performance, scalability, and clean architecture. From
+                                designing Redis-based distributed locking to optimizing database queries for fast
+                                performance, I bring practical engineering skills to every challenge.
                             </p>
                             <p style={{ color: 'var(--text-muted)' }} className="leading-relaxed">
-                                When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing
-                                to open-source projects, and continuously expanding my knowledge in the ever-evolving
-                                world of data science and software development.
+                                I&apos;m passionate about building software that solves real problems — whether
+                                it&apos;s preventing inventory overselling in flash sales or digitizing manual
+                                scheduling operations for businesses.
                             </p>
 
                             <div className="grid grid-cols-3 gap-4 pt-5 mt-2" style={{ borderTop: '1px solid var(--border-card)' }}>
                                 {[
-                                    { number: '10+', label: 'Projects' },
-                                    { number: '5+', label: 'Certifications' },
-                                    { number: '4+', label: 'Tech Stacks' },
+                                    { number: '3+', label: 'Projects' },
+                                    { number: '4+', label: 'Certifications' },
+                                    { number: '2+', label: 'Experiences' },
                                 ].map((stat) => (
                                     <div key={stat.label} className="text-center">
                                         <div className="text-2xl font-bold gradient-text">{stat.number}</div>

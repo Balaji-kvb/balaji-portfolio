@@ -1,47 +1,39 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, ExternalLink, Calendar } from 'lucide-react';
+import { Award, Calendar } from 'lucide-react';
 
 const certifications = [
     {
-        title: 'IBM Big Data Analytics',
+        title: 'Enterprise Design Thinking – Practitioner',
         issuer: 'IBM',
         date: '2024',
-        description: 'Comprehensive certification covering big data fundamentals, Hadoop ecosystem, Spark, and large-scale data processing techniques.',
+        description: 'Certification in IBM Enterprise Design Thinking methodology, covering user-centered design principles, team collaboration frameworks, and iterative solution design.',
         credential: '#',
         color: 'from-blue-500 to-cyan-400',
     },
     {
-        title: 'Machine Learning Certification',
-        issuer: 'Coursera / Stanford Online',
+        title: 'Data Fundamentals',
+        issuer: 'IBM',
         date: '2024',
-        description: 'In-depth course on supervised & unsupervised learning, neural networks, and practical ML system design.',
+        description: 'Understanding of core data concepts including data types, data sources, data repositories, and foundational data analysis techniques.',
         credential: '#',
         color: 'from-purple-500 to-pink-400',
     },
     {
-        title: 'Data Visualization Certification',
-        issuer: 'Google / Coursera',
+        title: 'Data Analysis with Python',
+        issuer: 'IBM',
         date: '2024',
-        description: 'Mastering data storytelling techniques, dashboard design, and visualization best practices using modern tools.',
+        description: 'Hands-on certification covering data wrangling, exploratory data analysis, and statistical modeling using Python libraries like Pandas and NumPy.',
         credential: '#',
         color: 'from-cyan-500 to-green-400',
     },
     {
-        title: 'Python for Data Science',
+        title: 'Data Visualization with Python',
         issuer: 'IBM',
-        date: '2023',
-        description: 'Python programming fundamentals with focus on data analysis libraries, scientific computing, and automation.',
+        date: '2024',
+        description: 'Creating compelling data visualizations using Matplotlib, Seaborn, and Folium to communicate insights effectively through charts, plots, and maps.',
         credential: '#',
         color: 'from-yellow-500 to-orange-400',
-    },
-    {
-        title: 'SQL for Data Analytics',
-        issuer: 'Udemy',
-        date: '2023',
-        description: 'Advanced SQL techniques including window functions, CTEs, query optimization, and database management.',
-        credential: '#',
-        color: 'from-green-500 to-blue-400',
     },
 ];
 
@@ -81,12 +73,6 @@ export default function Certifications() {
                                     style={{ background: 'var(--bg-icon)', border: '1px solid var(--border-icon)', color: 'var(--text-accent)' }}>
                                     <Award size={22} />
                                 </div>
-                                {cert.credential !== '#' && (
-                                    <a href={cert.credential} target="_blank" rel="noopener noreferrer"
-                                        style={{ color: 'var(--text-faint)' }} className="hover:opacity-80 transition-opacity">
-                                        <ExternalLink size={16} />
-                                    </a>
-                                )}
                             </div>
 
                             <h3 className="text-lg font-semibold mb-1 group-hover:text-cyan-500 transition-colors"
