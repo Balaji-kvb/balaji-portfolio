@@ -254,6 +254,66 @@
   .light .btn-primary:hover, .light .btn-secondary:hover {
     background: rgba(0, 0, 0, 0.1);
   }
+
+  /* ===== Profile Photo ===== */
+  .profile-photo-wrapper {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+  }
+
+  .profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    border: 3px solid var(--border-card);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .profile-photo:hover {
+    transform: scale(1.04);
+  }
+
+  .profile-photo-glow {
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 0deg,
+      rgba(6, 182, 212, 0.7),
+      rgba(59, 130, 246, 0.7),
+      rgba(168, 85, 247, 0.7),
+      rgba(6, 182, 212, 0.7)
+    );
+    z-index: 1;
+    animation: profileGlowSpin 6s linear infinite;
+    filter: blur(6px);
+    opacity: 0.6;
+  }
+
+  html.light .profile-photo-glow {
+    opacity: 0.45;
+    filter: blur(8px);
+  }
+
+  html.dark .profile-photo {
+    box-shadow: 0 8px 40px rgba(6, 182, 212, 0.15), 0 0 60px rgba(99, 102, 241, 0.08);
+  }
+
+  html.light .profile-photo {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 40px rgba(6, 182, 212, 0.08);
+  }
+
+  @media (max-width: 768px) {
+    .profile-photo-wrapper {
+      width: 150px;
+      height: 150px;
+    }
+  }
 }
 
 @layer utilities {
@@ -366,6 +426,15 @@ textarea:focus-visible,
 
   100% {
     background-position: 0% 0%, 100% 0%, 50% 100%;
+  }
+}
+
+@keyframes profileGlowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
